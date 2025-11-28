@@ -1,0 +1,43 @@
+body { margin: 0; font-family: Arial; }
+
+.dashboard-bg {
+    background-image: url("bg2.jpeg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    color: white;
+}
+
+.sidebar {
+    width: 240px; background: rgba(0,0,0,0.8);
+    padding: 20px; display:flex; flex-direction:column; gap:15px;
+}
+.sidebar button {
+    background:#222; padding:12px; border:none;
+    cursor:pointer; color:white; border-radius:10px;
+}
+
+.main { flex-grow:1; padding:20px; }
+.topbar { display:flex; gap:15px; margin-bottom:20px; }
+
+.card {
+    background: purple; width:190px; border-radius:12px;
+    padding:15px; text-align:center;
+}
+
+.stats { display:flex; gap:20px; margin-bottom:20px; }
+
+.book-container { display:flex; flex-wrap:wrap; gap:20px; }
+
+.book {
+    width:220px; background:white; color:black; padding:15px;
+    border-radius:12px; text-align:center;
+}
+
+.popup {
+    display:none; position:fixed; top:25%; left:35%;
+    background:white; padding:30px; border-radius:12px; color:black;
+}
+
+.add-btn { background:gold; color:black; border:none; padding:10px 20px; }

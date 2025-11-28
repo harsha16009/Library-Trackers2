@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body class="dashboard-bg">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2 class="logo">📚 Library</h2>
+        <button onclick="showAllBooks()">All Books</button>
+        <button onclick="showBorrowed()">My Books</button>
+        <button onclick="showHistory()">History</button>
+        <button onclick="showQueue()">Request Queue</button>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Main Panel -->
+    <div class="main">
+
+        <div class="topbar">
+            <h2 id="username-display"></h2>
+
+            <input type="text" id="searchBook" placeholder="Search books..." onkeyup="searchBooks()">
+            <button class="add-btn" onclick="showAddBook()">+ Add Book</button>
+        </div>
+
+        <div class="stats">
+            <div class="card"><h3 id="totalBooks">0</h3><p>Total Books</p></div>
+            <div class="card"><h3 id="availableBooks">0</h3><p>Available</p></div>
+            <div class="card"><h3 id="borrowedBooks">0</h3><p>Borrowed</p></div>
+            <div class="card"><h3 id="reservedBooks">0</h3><p>Reserved</p></div>
+        </div>
+
+        <div id="book-list" class="book-container"></div>
+
+    </div>
+
+    <!-- Add Book Modal -->
+    <div id="addBookPopup" class="popup">
+        <h2>Add Book</h2>
+        <input id="btitle" placeholder="Book Title">
+        <input id="bauthor" placeholder="Book Author">
+        <button onclick="addBook()">Save</button>
+        <button onclick="closePopup()">Cancel</button>
+    </div>
+
+</body>
+</html>
